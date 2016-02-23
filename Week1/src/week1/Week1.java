@@ -21,12 +21,11 @@ public class Week1 {
         System.out.println("Welkom bij de (MD Web) verzamelapp");
         System.out.println("---");
         System.out.println("Voer de naam van uw collectie in:");
-        Scanner sc1 = new Scanner(System.in);
-        String collectieNaam = sc1.next();
+        Scanner scanner = new Scanner(System.in);
+        String collectieNaam = scanner.next();
         
         System.out.println("Voer het jaar van uw collectie in:");
-        Scanner sc2 = new Scanner(System.in);
-        int jaar = sc2.nextInt();
+        int jaar = scanner.nextInt();
         verzamelApp = new Set(collectieNaam,jaar);
         System.out.println("Collectie aangemaakt!");
     }
