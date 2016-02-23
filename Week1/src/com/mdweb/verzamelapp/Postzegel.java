@@ -1,6 +1,6 @@
 package com.mdweb.verzamelapp;
 
-public class Postzegel extends Voorwerp{
+public class Postzegel extends Voorwerp implements Comparable{
     private int lengteInMillimeter;
     private int breedteInMillimeter;
 
@@ -19,6 +19,11 @@ public class Postzegel extends Voorwerp{
     
     public String getLengteBreedte() {
         return lengteInMillimeter + " " + breedteInMillimeter;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return this.getLengteBreedte().compareToIgnoreCase(((Postzegel)o).getLengteBreedte());
     }
     
     
