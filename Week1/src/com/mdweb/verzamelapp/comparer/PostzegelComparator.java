@@ -7,7 +7,7 @@ public class PostzegelComparator implements Comparator<Postzegel>{
 
     @Override
     public int compare(Postzegel o1, Postzegel o2) {
-        return o1.getLengteBreedte().compareToIgnoreCase(o2.getLengteBreedte());
+        return o1.getLengteBreedte().compareTo(((Postzegel)o2).getLengteBreedte());
     }
     
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package week1;
 
 import com.mdweb.verzamelapp.Bierdopje;
@@ -12,10 +7,6 @@ import com.mdweb.verzamelapp.SetManager;
 import com.mdweb.verzamelapp.Voorwerp;
 import java.util.Scanner;
 
-/**
- *
- * @author Dennis
- */
 public class Week1 {
     public static SetManager manager = SetManager.getSingletonObject();
     public static Scanner scanner = new Scanner(System.in);
@@ -67,6 +58,7 @@ public class Week1 {
         for(Set s : manager.setList){
             if(s.getId() == choice) return s;
         }
+        
         return null;
     }
     

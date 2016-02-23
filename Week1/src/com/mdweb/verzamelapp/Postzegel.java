@@ -17,13 +17,13 @@ public class Postzegel extends Voorwerp implements Comparable{
         return breedteInMillimeter;
     }
     
-    public String getLengteBreedte() {
-        return lengteInMillimeter + " " + breedteInMillimeter;
+    public Integer getLengteBreedte() {
+        return lengteInMillimeter * breedteInMillimeter;
     }
 
     @Override
     public int compareTo(Object o) {
-        return this.getLengteBreedte().compareToIgnoreCase(((Postzegel)o).getLengteBreedte());
+        return this.getLengteBreedte().compareTo(((Postzegel)o).getLengteBreedte());
     }
     
     
