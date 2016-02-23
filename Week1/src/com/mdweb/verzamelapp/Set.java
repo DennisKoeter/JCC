@@ -8,11 +8,19 @@ public class Set {
     private String naam;
     private int jaar;
     private List<Voorwerp> voorwerpen;
+    private static int AUTO_INCREMENT = 0;
+    private int id;
+    
+    public int getId() {
+        return id;
+    }
 
     public Set(String naam, int jaar) {
         this.naam = naam;
         this.jaar = jaar;
         this.voorwerpen = new ArrayList<>();
+        this.id = AUTO_INCREMENT;
+        AUTO_INCREMENT++;
     }
 
     public String getNaam() {
